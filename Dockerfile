@@ -2,6 +2,9 @@ FROM golang:1.12-alpine AS go-builder
 
 ENV DOCKER_GEN_VERSION=0.7.4
 
+# Used for compiling in armhf
+COPY qemu-arm-static* /usr/bin*
+
 # Install build dependencies for docker-gen
 RUN apk add --update \
         curl \
