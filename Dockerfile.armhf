@@ -1,7 +1,7 @@
 FROM alpine:3.9
 
 LABEL maintainer="Yves Blusseau <90z7oey02@sneakemail.com> (@blusseau)"
-COPY qemu-arm-static /usr/bin
+COPY qemu-arm-static /usr/bin/
 
 ENV DEBUG=false \
     DOCKER_HOST=unix:///var/run/docker.sock
